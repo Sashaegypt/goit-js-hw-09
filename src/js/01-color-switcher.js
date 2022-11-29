@@ -14,15 +14,10 @@ function onStart() {
 }
 
 function onStop(){
+ startBtn.disabled = false;
  clearInterval(intervalId);
 }
-// function onStart() {
-//     refs.startBtn.disabled = true;
-//     intervalId = setInterval(() => {
-//       document.body.style.backgroundColor = getRandomHexColor();
-//     }, 1000);
-//   }
-//   function onStop() {
-//     refs.startBtn.disabled = false;
-//     clearInterval(intervalId);
-//   }
+
+function getRandomHexColor() {
+    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  };
